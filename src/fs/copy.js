@@ -8,7 +8,6 @@ const __dirname = dirname(__filename);
 const copy = async () => {
     const sourceFolder = path.join(__dirname, '/files');
     const targetFolder = path.join(__dirname, '/files_copy');
-    console.log("aaaaa", sourceFolder)
 
     try {
         await mkdir(targetFolder);

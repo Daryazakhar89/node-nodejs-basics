@@ -7,7 +7,7 @@ const __dirname = dirname(__filename);
 
 const rename = async () => {
     const sourceFile = path.join(__dirname, '/files/wrongFilename.txt');
-    const renamedFile = path.join(__dirname, 'files/properFilename.md');
+    const renamedFile = path.join(__dirname, '/files/properFilename.md');
 
     try {
         await giveRenamedFile(sourceFile, renamedFile);
