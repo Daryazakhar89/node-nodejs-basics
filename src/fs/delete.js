@@ -1,4 +1,4 @@
-import {unlink} from 'fs/promises';
+import { unlink } from 'fs/promises';
 import { fileURLToPath } from 'url';
 import path, { dirname } from 'path';
 
@@ -7,6 +7,7 @@ const __dirname = dirname(__filename);
 
 const remove = async () => {
     const pathToFileToBeRemove = path.join(__dirname, '/files/fileToRemove.txt');
+
     try {
         await unlink(pathToFileToBeRemove);
     } catch (err) {
