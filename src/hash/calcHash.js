@@ -6,9 +6,9 @@ import path, { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const calculateHash = async () => {
-    const pathToFile = path.join(__dirname, '/files/fileToCalculateHashFor.txt');
+const pathToFile = path.join(__dirname, '/files/fileToCalculateHashFor.txt');
 
+const calculateHash = async () => {
     const content = await readFile(pathToFile);
     const modifiedContent = createHash('sha256').update(content).digest('hex');
 

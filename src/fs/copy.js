@@ -5,10 +5,10 @@ import path, { dirname } from 'path';
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
-const copy = async () => {
-    const sourceFolder = path.join(__dirname, '/files');
-    const targetFolder = path.join(__dirname, '/files_copy');
+const sourceFolder = path.join(__dirname, '/files');
+const targetFolder = path.join(__dirname, '/files_copy');
 
+const copy = async () => {
     try {
         await mkdir(targetFolder);
         const entries = await readdir(sourceFolder);

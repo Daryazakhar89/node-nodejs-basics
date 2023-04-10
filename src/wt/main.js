@@ -16,8 +16,8 @@ const createWokerPromise = (index) => {
 const getCalculationLogFromSettledPromises = (settledPromises) => {
     return settledPromises.map((promiseResult) => {
         return {
-            status: promiseResult.status === "fulfilled" ? "resolved" : "error",
-            data: promiseResult.status === "fulfilled" ? promiseResult.value : null
+            status: promiseResult.status === 'fulfilled' ? 'resolved' : 'error',
+            data: promiseResult.status === 'fulfilled' ? promiseResult.value : null
         };
     });
 };
@@ -30,7 +30,7 @@ const performCalculations = async () => {
     const settledPromises = await Promise.allSettled(promises);
     const calculationLog = getCalculationLogFromSettledPromises(settledPromises);
 
-    console.log("calculationLog", calculationLog);
+    console.log(calculationLog);
 };
 
 await performCalculations();
